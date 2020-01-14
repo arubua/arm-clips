@@ -1,0 +1,13 @@
+nav {
+
+}
+nav a {
+padding: 1%;
+color: white;
+margin: 0 1em;
+
+}
+nav input{
+  margin-left: 50%;
+  display: inline-block;
+}

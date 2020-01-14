@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 import { IMovie } from "../models/movie.model";
@@ -24,9 +24,9 @@ constructor( private http: HttpClient) {
 }
 
 
-getPopular() {
+getPopular(): Observable<any> {
   return this.http.get(
-    `${this.baseUrl}movie/popular?api_key=${this.apiKey}&language=${this.language}&page=${this.page}&region=${this.region}`);
+    `${this.baseUrl}movie/popular?api_key=${this.apiKey}&language=${this.language}&page=${this.page}&region=${this.region}`)
 }
 
 

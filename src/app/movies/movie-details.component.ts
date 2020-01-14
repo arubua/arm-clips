@@ -1,28 +1,27 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-import { HttpClient } from "@angular/common/http";
-import { map } from "rxjs/operators";
+
 
 import { ClipService } from "../shared/clip.service";
 import { IMovie } from "../models/movie.model";
-import { Observable } from "rxjs";
+
 
 
 @Component({
-  selector: "movies",
-  templateUrl: "./movie.component.html",
-  styleUrls: ["./movie.component.css"]
+  selector: "movie-details",
+  templateUrl: "./movie-details.component.html",
+  styleUrls: ["./movie-details.component.css"]
 })
 
-export class MovieComponent implements OnInit {
+export class MovieDetailsComponent implements OnInit {
   movies: IMovie[];
   baseUrl = "https://image.tmdb.org/t/p/";
   posterSize: "w500";
 
-  constructor(private http: HttpClient, private router: Router, private clipService: ClipService) {}
+  constructor(private router: Router, private clipService: ClipService) {}
 
     ngOnInit() {
-      this.getPopular();
+
     }
 
     getPopular() {

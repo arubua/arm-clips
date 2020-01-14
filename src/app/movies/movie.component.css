@@ -1,0 +1,43 @@
+div.container-fluid {
+  margin: auto;
+  width: 100%;
+  padding: 0;
+}
+.gallery {
+  float: left;
+  width: 24.99999%;
+  position: relative;
+
+}
+
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+
+}
+div.gallery img:hover {
+  opacity: .8;
+}
+.gallery.desc {
+  text-align: center;
+  position: absolute;
+  z-index: 999;
+  top: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

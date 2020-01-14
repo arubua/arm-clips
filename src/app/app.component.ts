@@ -6,7 +6,8 @@ import { Component } from "@angular/core";
   <nav-bar></nav-bar>
   <router-outlet></router-outlet>
   `,
-  styles: []
+  styles: [
+  ]
 })
 export class AppComponent {
   title = "arm-clips";
