@@ -1,0 +1,26 @@
+<div class="container-fluid" [routerLink] = "['/home']">
+  <h1>Now Playing</h1>
+  <section class="mat-card category-card now-playing" *ngFor="let playingmovie of playingmovies">
+    <a target="" href="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}">
+      <img src="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}" width="350" height="500">
+    </a>
+  </section>
+  <h1>Popular Movies</h1>
+  <mat-card class="mat-card category-card popular" *ngFor="let popmovie of popmovies">
+    <mat-card-title>{{popmovie?.title}}</mat-card-title>
+      <img mat-card-image src="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}">
+      <mat-card-content>{{popmovie?.overview}}</mat-card-content>
+  </mat-card>
+  <h1>Top Rated</h1>
+  <section class="mat-card category-card top-rated" *ngFor="let ratedmovie of ratedmovies">
+    <a target="" href="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}">
+      <img src="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}" width="350" height="500">
+    </a>
+  </section>
+  <h1>Upcoming</h1>
+  <section class="mat-card category-card upcoming" *ngFor="let upcomingmovie of upcomingmovies">
+    <a target="" href="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}">
+      <img src="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}" width="350" height="500">
+    </a>
+  </section>
+</div>

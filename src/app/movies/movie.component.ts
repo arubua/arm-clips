@@ -9,13 +9,12 @@ import { Observable } from "rxjs";
 
 
 @Component({
-  selector: "movies",
   templateUrl: "./movie.component.html",
   styleUrls: ["./movie.component.css"]
 })
 
 export class MovieComponent implements OnInit {
-  movies: IMovie[];
+  popmovies: IMovie[];
   baseUrl = "https://image.tmdb.org/t/p/";
   posterSize: "w500";
 
@@ -28,7 +27,7 @@ export class MovieComponent implements OnInit {
     getPopular() {
       this.clipService.getPopular().subscribe((res: any) => {
         console.log(res.results);
-        this.movies = res.results;
+        this.popmovies = res.results;
       });
     }
 

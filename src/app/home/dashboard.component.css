@@ -1,0 +1,24 @@
+.container-fluid {
+  margin: auto;
+  width: 100%;
+  padding: 0;
+}
+.category-card {
+  float: left;
+  width: 24.99999%;
+  position: relative;
+
+}
+
+
+div.gallery img:hover {
+  opacity: .8;
+}
+.category-card .desc {
+  text-align: center;
+  position: absolute;
+  z-index: 999;
+  top: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
