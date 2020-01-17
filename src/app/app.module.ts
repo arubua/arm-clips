@@ -3,6 +3,9 @@ import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import {MatCardModule} from "@angular/material/card";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatButtonModule} from "@angular/material/button";
+import {MatInputModule} from "@angular/material/input";
 
 import { MoviesModule } from "./movies/movie.module";
 
@@ -33,7 +36,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     FontAwesomeModule,
     MoviesModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [
     ClipService

@@ -1,7 +1,7 @@
-<mat-menu class="navbar ">
-  <a routerLink="/movies" routerLinkActive="active">Now Playing</a>
-  <a routerLink="/popular" routerLinkActive="active">Popular</a>
-  <a routerLink="/topRated" routerLinkActive="active">Top Rated</a>
-  <a routerLink="/upcoming" routerLinkActive="active">Upcoming</a>
-  <input class="search" placeholder="Search Movie" >
-</mat-menu>
+<nav class="navbar ">
+  <button mat-button  routerLink="/now_playing" routerLinkActive="active">Now Playing</button>
+  <button mat-button routerLink="/popular" routerLinkActive="active">Popular</button>
+  <button mat-button routerLink="/top_rated" routerLinkActive="active">Top Rated</button>
+  <button mat-button routerLink="/upcoming" routerLinkActive="active">Upcoming</button>
+  <mat-form-field><input matInput type="search" placeholder="Search Movie" ></mat-form-field>
+</nav>

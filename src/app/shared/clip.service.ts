@@ -23,12 +23,22 @@ constructor( private http: HttpClient) {
   this.region = "US";
 }
 
-
+getNowPlaying(): Observable<any> {
+  return this.http.get(
+    `${this.baseUrl}movie/now_playing?api_key=${this.apiKey}&language=${this.language}&page=${this.page}&region=${this.region}`
+  );
+}
 getPopular(): Observable<any> {
   return this.http.get(
-    `${this.baseUrl}movie/popular?api_key=${this.apiKey}&language=${this.language}&page=${this.page}&region=${this.region}`)
+    `${this.baseUrl}movie/popular?api_key=${this.apiKey}&language=${this.language}&page=${this.page}&region=${this.region}`);
 }
-
-
+getTopRated(): Observable<any> {
+  return this.http.get(
+    `${this.baseUrl}movie/top_rated?api_key=${this.apiKey}&language=${this.language}&page=${this.page}&region=${this.region}`);
+}
+getUpcoming(): Observable<any> {
+  return this.http.get(
+    `${this.baseUrl}movie/upcoming?api_key=${this.apiKey}&language=${this.language}&page=${this.page}&region=${this.region}`);
+}
 
 }

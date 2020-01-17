@@ -1,2 +1,15 @@
-
+nav{
+  padding: 2%;
+  background-color: #303030;
+}
+button{
+  padding: .7rem;
+  margin-right: .5rem;
+}
+.mat-button {
+  color: grey;
+}
+.matInput {
+  margin-left: 15rem;
+}
 

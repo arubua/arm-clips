@@ -1,26 +1,43 @@
 <div class="container-fluid" [routerLink] = "['/home']">
-  <h1>Now Playing</h1>
-  <section class="mat-card category-card now-playing" *ngFor="let playingmovie of playingmovies">
-    <a target="" href="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}">
-      <img src="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}" width="350" height="500">
-    </a>
-  </section>
-  <h1>Popular Movies</h1>
-  <mat-card class="mat-card category-card popular" *ngFor="let popmovie of popmovies">
-    <mat-card-title>{{popmovie?.title}}</mat-card-title>
-      <img mat-card-image src="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}">
-      <mat-card-content>{{popmovie?.overview}}</mat-card-content>
+
+  <div class="category">
+  <h4>Now Playing</h4>
+  <mat-card  *ngFor="let playingMovie of playingMovies">
+    <mat-card-title>{{playingMovie?.title}}</mat-card-title>
+      <img mat-card-image src="https://image.tmdb.org/t/p/w500{{playingMovie?.poster_path}}" >
+      <mat-card-content>{{playingMovie?.release_date}}</mat-card-content>
   </mat-card>
-  <h1>Top Rated</h1>
-  <section class="mat-card category-card top-rated" *ngFor="let ratedmovie of ratedmovies">
-    <a target="" href="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}">
-      <img src="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}" width="350" height="500">
-    </a>
-  </section>
-  <h1>Upcoming</h1>
-  <section class="mat-card category-card upcoming" *ngFor="let upcomingmovie of upcomingmovies">
-    <a target="" href="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}">
-      <img src="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}" width="350" height="500">
-    </a>
-  </section>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="category">
+    <h4>Popular</h4>
+    <mat-card  *ngFor="let popMovie of popMovies">
+      <mat-card-title>{{popMovie?.title}}</mat-card-title>
+        <img mat-card-image src="https://image.tmdb.org/t/p/w500{{popMovie?.poster_path}}" >
+        <mat-card-content>{{popMovie?.release_date}}</mat-card-content>
+    </mat-card>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="category">
+    <h4>Top Rated</h4>
+    <mat-card  *ngFor="let ratedMovie of ratedMovies">
+      <mat-card-title>{{ratedMovie?.title}}</mat-card-title>
+        <img mat-card-image src="https://image.tmdb.org/t/p/w500{{ratedMovie?.poster_path}}" >
+        <mat-card-content>{{ratedMovie?.release_date}}</mat-card-content>
+    </mat-card>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="category">
+    <h4>Upcoming</h4>
+    <mat-card  *ngFor="let upcomingMovie of upcomingMovies">
+      <mat-card-title>{{upcomingMovie?.title}}</mat-card-title>
+        <img mat-card-image src="https://image.tmdb.org/t/p/w500{{upcomingMovie?.poster_path}}" >
+        <mat-card-content>{{upcomingMovie?.release_date}}</mat-card-content>
+    </mat-card>
+  </div>
+  <div class="clearfix"></div>
+
 </div>

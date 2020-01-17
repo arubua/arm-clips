@@ -1,10 +1,20 @@
-<div class="container-fluid" routerLink = "/popular">
-  <div class="gallery" *ngFor="let popmovie of popmovies" >
-    <a target="" href="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}">
-      <img src="https://image.tmdb.org/t/p/w500{{popmovie?.poster_path}}" width="350" height="500">
+<div class="container-fluid" routerLink = '/now_playing' >
+  <div class="gallery" *ngFor="let playingMovie of playingMovies" >
+    <a target="" href="https://image.tmdb.org/t/p/w500{{playingMovie?.poster_path}}">
+      <img src="https://image.tmdb.org/t/p/w500{{playingMovie?.poster_path}}" width="350" height="500">
     </a>
   </div>
-</div><div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+
+<div class="container-fluid" routerLink = '/popular'>
+  <div class="gallery" *ngFor="let popMovie of popMovies" >
+    <a target="" href="https://image.tmdb.org/t/p/w500{{popMovie?.poster_path}}">
+      <img src="https://image.tmdb.org/t/p/w500{{popMovie?.poster_path}}" width="350" height="500">
+    </a>
+  </div>
+</div>
+<div class="clearfix"></div>
 
 
 
