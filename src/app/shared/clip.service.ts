@@ -2,10 +2,6 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Observable } from "rxjs";
 
-import { IMovie } from "../models/movie.model";
-
-
-
 @Injectable()
 
 export class ClipService {
@@ -39,6 +35,11 @@ getTopRated(): Observable<any> {
 getUpcoming(): Observable<any> {
   return this.http.get(
     `${this.baseUrl}movie/upcoming?api_key=${this.apiKey}&language=${this.language}&page=${this.page}&region=${this.region}`);
+}
+
+getMovie(id: string): Observable<any> {
+  return this.http.get(
+    `${this.baseUrl}movie/${id}?api_key=${this.apiKey}&language=${this.language}`);
 }
 
 }

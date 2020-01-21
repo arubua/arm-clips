@@ -6,11 +6,20 @@ import { ClipService } from "../shared/clip.service";
 import { IMovie } from "../models/movie.model";
 
 @Component({
-  templateUrl: "movie.component.html",
-  styleUrls: ["movie.component.css"]
+  template: `
+  <div class="container-fluid" routerLink = '/now_playing' >
+  <div class="gallery" *ngFor="let playingMovie of playingMovies" >
+    <a routerLink="{{playingMovie?.id}}" target="" href="https://image.tmdb.org/t/p/w500{{playingMovie?.poster_path}}">
+      <img src="https://image.tmdb.org/t/p/w500{{playingMovie?.poster_path}}" width="350" height="500">
+    </a>
+  </div>
+</div>
+<div class="clearfix"></div>
+  `,
+  styleUrls: ["movies.component.css"]
 })
 
-export class MovieComponent implements OnInit {
+export class NowPlayingMovieComponent implements OnInit {
   popMovies: IMovie[];
   playingMovies: IMovie[];
   ratedMovies: IMovie[];
@@ -21,35 +30,14 @@ export class MovieComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router, private clipService: ClipService) {}
 
     ngOnInit() {
-      this.getPopular();
-      this.getPopular();
-      this.getTopRated();
-      this.getUpcoming();
+      this.getNowPlaying();
+
     }
 
     getNowPlaying() {
       this.clipService.getNowPlaying().subscribe((res: any) => {
         console.log(res.results);
         this.playingMovies = res.results;
-      });
-    }
-
-    getPopular() {
-      this.clipService.getPopular().subscribe((res: any) => {
-        console.log(res.results);
-        this.popMovies = res.results;
-      });
-    }
-    getTopRated() {
-      this.clipService.getTopRated().subscribe((res: any) => {
-        console.log(res.results);
-        this.ratedMovies = res.results;
-      });
-    }
-    getUpcoming() {
-      this.clipService.getUpcoming().subscribe((res: any) => {
-        console.log(res.results);
-        this.upcomingMovies = res.results;
       });
     }
 

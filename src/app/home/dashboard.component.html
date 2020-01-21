@@ -3,9 +3,12 @@
   <div class="category">
   <h4>Now Playing</h4>
   <mat-card  *ngFor="let playingMovie of playingMovies">
-    <mat-card-title>{{playingMovie?.title}}</mat-card-title>
+    <mat-card-title>{{playingMovie?.title|ellipsis:50}}</mat-card-title>
       <img mat-card-image src="https://image.tmdb.org/t/p/w500{{playingMovie?.poster_path}}" >
-      <mat-card-content>{{playingMovie?.release_date}}</mat-card-content>
+
+
+      <mat-card-content>{{playingMovie?.overview|ellipsis:200}}</mat-card-content>
+
   </mat-card>
   </div>
   <div class="clearfix"></div>
@@ -13,9 +16,9 @@
   <div class="category">
     <h4>Popular</h4>
     <mat-card  *ngFor="let popMovie of popMovies">
-      <mat-card-title>{{popMovie?.title}}</mat-card-title>
+      <mat-card-title>{{popMovie?.title|ellipsis:50}}</mat-card-title>
         <img mat-card-image src="https://image.tmdb.org/t/p/w500{{popMovie?.poster_path}}" >
-        <mat-card-content>{{popMovie?.release_date}}</mat-card-content>
+        <mat-card-content>{{popMovie?.overview|ellipsis:200}}</mat-card-content>
     </mat-card>
   </div>
   <div class="clearfix"></div>
@@ -23,9 +26,9 @@
   <div class="category">
     <h4>Top Rated</h4>
     <mat-card  *ngFor="let ratedMovie of ratedMovies">
-      <mat-card-title>{{ratedMovie?.title}}</mat-card-title>
+      <mat-card-title>{{ratedMovie?.title|ellipsis:40}}</mat-card-title>
         <img mat-card-image src="https://image.tmdb.org/t/p/w500{{ratedMovie?.poster_path}}" >
-        <mat-card-content>{{ratedMovie?.release_date}}</mat-card-content>
+        <mat-card-content>{{ratedMovie?.overview|ellipsis:200}}</mat-card-content>
     </mat-card>
   </div>
   <div class="clearfix"></div>
@@ -33,9 +36,9 @@
   <div class="category">
     <h4>Upcoming</h4>
     <mat-card  *ngFor="let upcomingMovie of upcomingMovies">
-      <mat-card-title>{{upcomingMovie?.title}}</mat-card-title>
+      <mat-card-title>{{upcomingMovie?.title|ellipsis:40}}</mat-card-title>
         <img mat-card-image src="https://image.tmdb.org/t/p/w500{{upcomingMovie?.poster_path}}" >
-        <mat-card-content>{{upcomingMovie?.release_date}}</mat-card-content>
+        <mat-card-content>{{upcomingMovie?.overview|ellipsis:200}}</mat-card-content>
     </mat-card>
   </div>
   <div class="clearfix"></div>

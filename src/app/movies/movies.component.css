@@ -32,10 +32,6 @@ div.gallery img:hover {
   box-sizing: border-box;
 }
 
-
-
-
-
 .clearfix:after {
   content: "";
   display: table;

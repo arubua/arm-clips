@@ -11,6 +11,7 @@ import { MoviesModule } from "./movies/movie.module";
 
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./nav/navbar.component";
+import { EllipsisPipe } from "./shared/ellipsis.pipe";
 
 import { DashboardComponent} from "./home/dashboard.component";
 import { ClipService } from "./shared/clip.service";
@@ -23,7 +24,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
   declarations: [
     AppComponent,
     NavbarComponent,
-    DashboardComponent
+    DashboardComponent,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule,
