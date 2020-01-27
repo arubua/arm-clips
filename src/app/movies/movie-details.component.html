@@ -1,0 +1,23 @@
+<div class="container">
+  <mat-tab-group>
+    <mat-tab label="Overview">
+      <div id="overview" >
+        <img src="https://image.tmdb.org/t/p/w500{{movie?.backdrop_path}}" width="450">
+        <div class="details">
+          <h1>{{movie?.original_title}}</h1>
+          <span *ngFor="let genre of movie.genres">{{genre.name}} </span>
+          <a>{{movie?.runtime}} mins</a><br>
+          <p>{{movie?.overview}}</p><br>
+          <span *ngFor="let company of movie.production_companies">
+            {{company?.name}} ||
+          </span>
+          <div class="clearfix"></div>
+        </div>
+        <div></div>
+      </div>
+    </mat-tab>
+    <mat-tab label="See Also"> Content 2 </mat-tab>
+    <mat-tab label="Trailers"> Content 3 </mat-tab>
+  </mat-tab-group>
+</div>
+

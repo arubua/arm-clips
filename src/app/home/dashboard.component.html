@@ -1,44 +1,48 @@
 <div class="container-fluid" [routerLink] = "['/home']">
 
   <div class="category">
-  <h4>Now Playing</h4>
-  <mat-card  *ngFor="let playingMovie of playingMovies">
-    <mat-card-title>{{playingMovie?.title|ellipsis:50}}</mat-card-title>
-      <img mat-card-image src="https://image.tmdb.org/t/p/w500{{playingMovie?.poster_path}}" >
+  <a href=""><h4>Now Playing</h4></a>
+  <mat-card class="md-elevation-z20"  *ngFor="let playingMovie of playingMovies">
+    <img mat-card-image src="https://image.tmdb.org/t/p/w500{{playingMovie?.poster_path}}" >
 
-
-      <mat-card-content>{{playingMovie?.overview|ellipsis:200}}</mat-card-content>
-
+      <mat-card-title>{{playingMovie?.title|ellipsis:50}}</mat-card-title>
+      <mat-card-subtitle>{{playingMovie.release_date|date: longDate}}</mat-card-subtitle>
+      <mat-card-content>{{playingMovie?.overview|ellipsis:175}}</mat-card-content>
+      <mat-divider [inset]="true"></mat-divider>
+      <mat-card-footer><a>Read More</a></mat-card-footer>
   </mat-card>
   </div>
   <div class="clearfix"></div>
 
   <div class="category">
-    <h4>Popular</h4>
+    <a href=""><h4>Popular</h4></a>
     <mat-card  *ngFor="let popMovie of popMovies">
+      <img mat-card-image src="https://image.tmdb.org/t/p/w500{{popMovie?.poster_path}}" >
       <mat-card-title>{{popMovie?.title|ellipsis:50}}</mat-card-title>
-        <img mat-card-image src="https://image.tmdb.org/t/p/w500{{popMovie?.poster_path}}" >
-        <mat-card-content>{{popMovie?.overview|ellipsis:200}}</mat-card-content>
+      <mat-card-subtitle>{{popMovie?.release_date|date: longDate}}</mat-card-subtitle>
+      <mat-card-content>{{popMovie?.overview|ellipsis:175}}</mat-card-content>
     </mat-card>
   </div>
   <div class="clearfix"></div>
 
   <div class="category">
-    <h4>Top Rated</h4>
+    <a href=""><h4>Top Rated</h4></a>
     <mat-card  *ngFor="let ratedMovie of ratedMovies">
+      <img mat-card-image src="https://image.tmdb.org/t/p/w500{{ratedMovie?.poster_path}}" >
       <mat-card-title>{{ratedMovie?.title|ellipsis:40}}</mat-card-title>
-        <img mat-card-image src="https://image.tmdb.org/t/p/w500{{ratedMovie?.poster_path}}" >
-        <mat-card-content>{{ratedMovie?.overview|ellipsis:200}}</mat-card-content>
+      <mat-card-subtitle>{{ratedMovie?.release_date|date: longDate}}</mat-card-subtitle>
+      <mat-card-content>{{ratedMovie?.overview|ellipsis:175}}</mat-card-content>
     </mat-card>
   </div>
   <div class="clearfix"></div>
 
   <div class="category">
-    <h4>Upcoming</h4>
+    <a href=""><h4>Upcoming</h4></a>
     <mat-card  *ngFor="let upcomingMovie of upcomingMovies">
+      <img mat-card-image src="https://image.tmdb.org/t/p/w500{{upcomingMovie?.poster_path}}">
       <mat-card-title>{{upcomingMovie?.title|ellipsis:40}}</mat-card-title>
-        <img mat-card-image src="https://image.tmdb.org/t/p/w500{{upcomingMovie?.poster_path}}" >
-        <mat-card-content>{{upcomingMovie?.overview|ellipsis:200}}</mat-card-content>
+      <mat-card-subtitle>{{upcomingMovie?.release_date|date: longDate}}</mat-card-subtitle>
+      <mat-card-content>{{upcomingMovie?.overview|ellipsis:175}}</mat-card-content>
     </mat-card>
   </div>
   <div class="clearfix"></div>

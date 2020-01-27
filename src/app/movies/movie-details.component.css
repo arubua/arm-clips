@@ -1,0 +1,29 @@
+.container{
+  height: 100vh;
+  background-color: #303030;
+}
+img{
+  float: left;
+}
+
+.details{
+  float: right;
+  width: 60%;
+  padding-right: 10%;
+  color: white;
+}
+.details:first-child{
+  font-size: 24px;
+  padding: 2px;
+}
+.details span{
+  font-style: italic;
+}
+.details img{
+  padding-right: 12px;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

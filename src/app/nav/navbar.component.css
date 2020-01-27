@@ -1,6 +1,11 @@
 nav{
   padding: 2%;
   background-color: #303030;
+  text-align: center;
+}
+mat-form-field{
+  float: right;
+ color: white;
 }
 button{
   padding: .7rem;
@@ -12,4 +17,15 @@ button{
 .matInput {
   margin-left: 15rem;
 }
-
+nav button:last-child{
+  margin-right: 5%;
+}
+.active{
+  background-color: #f50057;
+  color: white;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
