@@ -16,6 +16,7 @@ import { IMovie } from "../models/movie.model";
 
 export class MovieDetailsComponent implements OnInit {
   movie: object;
+  credits: object;
   baseUrl = "https://image.tmdb.org/t/p/";
   posterSize: "w500";
 
@@ -27,6 +28,10 @@ export class MovieDetailsComponent implements OnInit {
       this.clipService.getMovie(id).subscribe((movie) => {
         console.log(movie);
         this.movie = movie;
+      });
+      this.clipService.getCredits(id).subscribe((credits) => {
+        console.log(credits);
+        this.credits = credits;
       });
     }
 

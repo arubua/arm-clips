@@ -2,6 +2,8 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import {MatTabsModule} from "@angular/material/tabs";
+import {MatIconModule} from "@angular/material/icon";
+import {MatCardModule} from "@angular/material/card";
 
 import { NowPlayingMovieComponent } from "./now-playing.component";
 import { PopularMovieComponent } from "./popular.component";
@@ -24,7 +26,9 @@ import { MovieDetailsComponent } from "./movie-details.component";
       {path: "", redirectTo: "home", pathMatch: "full"},
       {path: "**", redirectTo: "home", pathMatch: "full"}
     ]),
-    MatTabsModule
+    MatTabsModule,
+    MatIconModule,
+    MatCardModule
   ],
   declarations: [
     NowPlayingMovieComponent,

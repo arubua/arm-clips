@@ -2,22 +2,43 @@
   <mat-tab-group>
     <mat-tab label="Overview">
       <div id="overview" >
-        <img src="https://image.tmdb.org/t/p/w500{{movie?.backdrop_path}}" width="450">
+        <img src="https://image.tmdb.org/t/p/w500{{movie?.backdrop_path}}">
         <div class="details">
           <h1>{{movie?.original_title}}</h1>
-          <span *ngFor="let genre of movie.genres">{{genre.name}} </span>
-          <a>{{movie?.runtime}} mins</a><br>
+          <div>
+            <mat-icon class="material-icons">timer</mat-icon><span>{{movie?.runtime}} mins</span>
+            <mat-icon class="material-icons">star</mat-icon><span>{{movie?.vote_average}}</span>
+            <mat-icon class="material-icons">date_range</mat-icon><span>{{movie?.release_date | date: "MMM yyyy"}}</span>
+          </div>
+          <br>
+          <strong *ngFor="let genre of movie.genres">{{genre.name}} </strong>
           <p>{{movie?.overview}}</p><br>
-          <span *ngFor="let company of movie.production_companies">
-            {{company?.name}} ||
-          </span>
-          <div class="clearfix"></div>
+
         </div>
-        <div></div>
       </div>
+      <div class="clearfix"></div>
+      <div class="credits">
+        <h2>Cast</h2>
+        <mat-card class="class" *ngFor="let cast of credits.cast">
+          <img mat-card-image src="https://image.tmdb.org/t/p/w500{{cast?.profile_path}}" >
+
+        </mat-card>
+        </div>
+        <div class="clearfix"></div>
+
     </mat-tab>
-    <mat-tab label="See Also"> Content 2 </mat-tab>
-    <mat-tab label="Trailers"> Content 3 </mat-tab>
+    <mat-tab label="Trailer">
+
+    </mat-tab>
+    <mat-tab label="See Also">
+        <div class="gallery" *ngFor="let playingMovie of playingMovies" >
+          <a routerLink="{{playingMovie?.id}}" target="" href="https://image.tmdb.org/t/p/w500{{playingMovie?.poster_path}}">
+            <img src="https://image.tmdb.org/t/p/w500{{playingMovie?.poster_path}}" width="350" height="500">
+          </a>
+        </div>
+
+      <div class="clearfix"></div>
+    </mat-tab>
   </mat-tab-group>
 </div>
 

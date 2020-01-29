@@ -43,7 +43,7 @@ getMovie(id: string): Observable<any> {
 }
 getCredits(id: string): Observable<any> {
   return this.http.get(
-    `${this.baseUrl}movie/${id}?api_key=${this.apiKey}`);
+    `${this.baseUrl}movie/${id}/credits?api_key=${this.apiKey}`);
 }
 
 }
