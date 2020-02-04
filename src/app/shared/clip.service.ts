@@ -10,6 +10,7 @@ export class ClipService {
   language: string;
   region: string;
   page: number;
+  atr: string;
 
 constructor( private http: HttpClient) {
   this.baseUrl = "https://api.themoviedb.org/3/";
@@ -17,6 +18,7 @@ constructor( private http: HttpClient) {
   this.language = "en-US";
   this.page = 1;
   this.region = "US";
+  this.atr = "videos,images";
 }
 
 getNowPlaying(): Observable<any> {
@@ -39,7 +41,8 @@ getUpcoming(): Observable<any> {
 
 getMovie(id: string): Observable<any> {
   return this.http.get(
-    `${this.baseUrl}movie/${id}?api_key=${this.apiKey}&language=${this.language}`);
+    // tslint:disable-next-line: max-line-length
+    `${this.baseUrl}movie/${id}?api_key=${this.apiKey}&language=${this.language}&append_to_response=${this.atr}&include_image_language=en,null`);
 }
 getCredits(id: string): Observable<any> {
   return this.http.get(

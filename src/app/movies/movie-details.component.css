@@ -1,5 +1,5 @@
 .container{
-  height: 120vh;
+
   background-color: #303030;
 }
 img{
@@ -38,11 +38,19 @@ credits {
   margin: 0 auto;
 }
 mat-card{
-  width: 50px;
+  width: 60px;
+  height: 107px;
+  object-fit: cover;
   float: left;
-  margin: 8px;
-  font-size: x-small;
+  margin: 3% 5%;
+  line-height: 2;
+  font-size: small;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #f50057;
 }
+
+
 h2{
   margin-left: 8px;
   color: white;

@@ -10,6 +10,7 @@ import { PopularMovieComponent } from "./popular.component";
 import { TopRatedMovieComponent } from "./top-rated.component";
 import { UpcomingMovieComponent } from "./upcoming.component";
 import { MovieDetailsComponent } from "./movie-details.component";
+import { SafePipe } from "../shared/safe.pipe";
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { MovieDetailsComponent } from "./movie-details.component";
     PopularMovieComponent,
     TopRatedMovieComponent,
     UpcomingMovieComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    SafePipe
   ]
 })
 

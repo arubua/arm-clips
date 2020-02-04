@@ -20,6 +20,7 @@ export class MovieDetailsComponent implements OnInit {
   baseUrl = "https://image.tmdb.org/t/p/";
   posterSize: "w500";
 
+
   constructor(private router: ActivatedRoute, private clipService: ClipService) {}
 
     ngOnInit() {

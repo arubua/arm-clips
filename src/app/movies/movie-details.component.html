@@ -20,8 +20,8 @@
       <div class="credits">
         <h2>Cast</h2>
         <mat-card class="class" *ngFor="let cast of credits.cast">
-          <img mat-card-image src="https://image.tmdb.org/t/p/w500{{cast?.profile_path}}" >
-
+          <img mat-card-image src="https://image.tmdb.org/t/p/w92{{cast?.profile_path}}">
+          <mat-card-footer>{{cast.name}}</mat-card-footer>
         </mat-card>
         </div>
         <div class="clearfix"></div>

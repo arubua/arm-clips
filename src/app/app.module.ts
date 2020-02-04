@@ -18,6 +18,7 @@ import { EllipsisPipe } from "./shared/ellipsis.pipe";
 
 import { DashboardComponent} from "./home/dashboard.component";
 import { ClipService } from "./shared/clip.service";
+
 import { RouterModule } from "@angular/router";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
