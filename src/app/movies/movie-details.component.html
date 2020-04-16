@@ -11,7 +11,7 @@
             <mat-icon class="material-icons">date_range</mat-icon><span>{{movie?.release_date | date: "MMM yyyy"}}</span>
           </div>
           <br>
-          <strong *ngFor="let genre of movie.genres">{{genre.name}} </strong>
+          <strong *ngFor="let genre of movie.genres"> {{genre.name}} .</strong>
           <p>{{movie?.overview}}</p><br>
 
         </div>

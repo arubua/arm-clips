@@ -5,7 +5,7 @@ import { IMovie } from "../models/movie.model";
 
 @Component({
   template: `
-  <div class="container-fluid" routerLink = '/top_rated' >
+  <div class="container-flex" routerLink = '/top_rated' >
   <div class="gallery" *ngFor="let ratedMovie of ratedMovies" >
     <a routerLink="{{ratedMovie?.id}}" target="" href="https://image.tmdb.org/t/p/w500{{ratedMovie?.poster_path}}">
       <img src="https://image.tmdb.org/t/p/w500{{ratedMovie?.poster_path}}" width="350" height="500">

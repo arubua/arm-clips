@@ -1,4 +1,8 @@
-div.container-fluid {
+div.container-flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
   margin: auto;
   width: 100%;
   padding: 0;
@@ -6,13 +10,19 @@ div.container-fluid {
 .gallery {
   float: left;
   width: 24.99999%;
+  min-width: 106px;
   position: relative;
-
+  vertical-align: baseline;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 
 div.gallery img {
   width: 100%;
+
   height: auto;
 
 }

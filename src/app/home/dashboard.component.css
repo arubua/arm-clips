@@ -1,21 +1,26 @@
-.container-fluid {
+.container-flex {
   font-family: 'Dosis', sans-serif;
-  margin: 0 4.5%;
-  width: 100%;
-  padding: 0;
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 .category {
-  margin: auto;
-  width: 100%;
+  vertical-align: baseline;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 mat-card {
-  width: 20%;
-  float: left;
+  margin: .5%;
+  max-width: 15%;
+  min-width: 310px;
   text-align: center;
-  margin: .4%;
   padding-bottom: 0;
   background-color:#ffffff ;
   border-radius: 0;
+  vertical-align: baseline;
 }
 .mat-card:not([class*=mat-elevation-z]) {
   box-shadow: 0 2px 1px -1px rgba(213, 214, 209, .6),
@@ -29,25 +34,24 @@ mat-card-title {
   text-align: center;
   color:#2f2e33 ;
 }
+
+a{
+ text-decoration: none;
+}
 h4 {
   margin-left: .4%;
   margin-bottom: 0;
   font-size: 1.5em;
   color: #f50057;
-}
-a{
- text-decoration: none;
+
 }
 .mat-card-image {
-  width: 50%;
+  max-width: 50%;
   float:left;
   margin-bottom: 0;
   border-radius: 0;
 }
-.mat-card-image:first-child {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
+
 mat-card-content{
   width: 50%;
   float: right;
@@ -64,6 +68,9 @@ mat-card-subtitle{
   margin-bottom: 5px;
 }
 mat-card-footer{
+  width: 50%;
+  float: right;
+  text-align: center;
   color: #f50057;
 }
 mat-divider{
